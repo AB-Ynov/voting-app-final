@@ -98,5 +98,3 @@ Packer/
 ---
 
 **Note :** Assurez-vous d'avoir les outils nécessaires tels que `kubectl`, `helm`, `packer`, `ansible`, et Terraform installés localement. Consultez la documentation respective pour plus d'informations.
-
-```
