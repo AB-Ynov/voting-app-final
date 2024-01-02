@@ -1,4 +1,3 @@
-```markdown
 # Projet Voting App
 
 Ce projet est une application de vote simple déployée sur Kubernetes, avec des métriques surveillées par Prometheus et une visualisation des données via Grafana. L'intégration d'alertes Slack permet également d'être informé des événements critiques.
