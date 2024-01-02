@@ -43,6 +43,27 @@ Helm/
     |-- values.yaml
 ```
 
+## Dockerfile
+
+Un Dockerfile est inclus dans la racine du projet pour créer une image Docker de l'application. Le Dockerfile utilise un build multi-étapes pour optimiser la taille de l'image finale.
+
+```plaintext
+Dockerfile
+```
+
+## Packer et Ansible
+
+Utilisez Packer pour déployer et provisionner une image Docker à l'aide d'Ansible. Assurez-vous d'avoir Packer et Ansible installés localement.
+
+```plaintext
+Packer/
+|-- packer.json
+|-- ansible/
+|   |-- playbook.yml
+|   |-- roles/
+|       |-- ...
+```
+
 ## Instructions d'Installation
 
 1. **Déploiement de l'Infrastructure :** Exécutez les scripts Terraform pour créer l'infrastructure Azure nécessaire.
@@ -67,9 +88,15 @@ Helm/
     - Créez un Workspace Slack.
     - Configurez Grafana pour utiliser Slack comme canal d'alerte.
 
+6. **Dockerfile et Packer :** Utilisez le Dockerfile pour créer une image Docker de l'application. Utilisez également Packer avec Ansible pour déployer et provisionner une image Docker.
+
+    ```bash
+    cd Packer
+    packer build packer.json
+    ```
+
 ---
 
-**Note :** Assurez-vous d'avoir les outils nécessaires tels que `kubectl`, `helm`, et Terraform installés localement. Consultez la documentation respective pour plus d'informations.
+**Note :** Assurez-vous d'avoir les outils nécessaires tels que `kubectl`, `helm`, `packer`, `ansible`, et Terraform installés localement. Consultez la documentation respective pour plus d'informations.
 
-Pour toute question ou problème, n'hésitez pas à contacter les contributeurs du projet.
 ```
