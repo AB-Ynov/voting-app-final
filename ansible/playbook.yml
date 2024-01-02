@@ -1,0 +1,18 @@
+- name: Deploy and provision Docker image
+  hosts: all
+  become: true
+  tasks:
+    - name: Install Docker
+      apt:
+        name: docker.io
+        state: present
+
+    - name: Load Docker image
+      shell: docker load -i /path/to/your/image.tar
+
+    - name: Run Docker container
+      docker_container:
+        name: your-container-name
+        image: your-image-name:latest
+        ports:
+          - "8080:80"
